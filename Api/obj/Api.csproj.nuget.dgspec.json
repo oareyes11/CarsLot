@@ -25,7 +25,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Core/Core.csproj": {
+                "projectPath": "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Core/Core.csproj"
+              },
+              "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/DB/DB.csproj": {
+                "projectPath": "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/DB/DB.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -43,6 +50,12 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -63,6 +76,142 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Core/Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Core/Core.csproj",
+        "projectName": "Core",
+        "projectPath": "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Core/Core.csproj",
+        "packagesPath": "/Users/andres/.nuget/packages/",
+        "outputPath": "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/andres/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/DB/DB.csproj": {
+                "projectPath": "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/DB/DB.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/DB/DB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/DB/DB.csproj",
+        "projectName": "DB",
+        "projectPath": "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/DB/DB.csproj",
+        "packagesPath": "/Users/andres/.nuget/packages/",
+        "outputPath": "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/DB/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/andres/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
