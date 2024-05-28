@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "HTUR4bnxSXGoo6LvB6VGV2iR4uypYgrazlp95U82VDE2kNOUd0Gkaxf+SZNQ0tlAGntlTQJmc4jSdhWx/fOyPw==",
+  "success": true,
+  "projectFilePath": "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/andres/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/andres/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/andres/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "/Users/andres/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "/Users/andres/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "/Users/andres/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
