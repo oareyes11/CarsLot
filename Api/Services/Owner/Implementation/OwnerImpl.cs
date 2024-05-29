@@ -4,7 +4,7 @@ using Core.Repository.Interfaces;
 using DB.Entities;
 namespace Api.Services.Owner.Implementation
 {
-    public class OwnerImpl : IGenericPostAsync<OwnerEntity>, IGenericGetByAsync<OwnerEntity, EmailFilter>
+    public class OwnerImpl : IGenericPostAsync<OwnerEntity,OwnerEntity>, IGenericGetByAsync<OwnerEntity, EmailFilter>
     {
         private readonly IGenericPostRepo<OwnerEntity> _postOwnerRepo;
         private readonly IGenericGetByRepo<OwnerEntity> _getByOwnerRepo;

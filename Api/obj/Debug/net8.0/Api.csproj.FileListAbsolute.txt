@@ -109,3 +109,5 @@
 /Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/DB.dll
 /Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/DB.pdb
 /Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/Core.pdb
+/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/Mapster.dll
+/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/Mapster.Core.dll

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "BqiisXY4UxMu81MO1MpfshNqdcHUeS+ZsYtnlfNunhN2yCews0V9OLRL0yC0H5K//2YREATlKEx/atQh+fnqhg==",
+  "dgSpecHash": "ofe8wbs4wplUs821SzhYBrVKJ7opfMo20kx76XvM9Pn/VLp9COWghmWb3i6fBn/Hcn3WmTa3lWY2vtCzEHvhUg==",
   "success": true,
   "projectFilePath": "/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/Api.csproj",
   "expectedPackageFiles": [
     "/Users/andres/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/andres/.nuget/packages/mapster/7.4.0/mapster.7.4.0.nupkg.sha512",
+    "/Users/andres/.nuget/packages/mapster.core/1.2.1/mapster.core.1.2.1.nupkg.sha512",
     "/Users/andres/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/Users/andres/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3/microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "/Users/andres/.nuget/packages/microsoft.codeanalysis.common/4.5.0/microsoft.codeanalysis.common.4.5.0.nupkg.sha512",

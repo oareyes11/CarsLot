@@ -1,11 +1,15 @@
+using Api.Casts.Reqest.Vehicle;
+using Api.Casts.Response.Vehicle;
 using Api.Filters.Base;
 using Api.Repositories.Generic;
 using Api.Services.Base.Interfaces;
 using Api.Services.Owner.Implementation;
+using Api.Services.Vehicle;
 using Core.Implementations.Specification;
 using Core.Repository.Interfaces;
 using DB.context;
 using DB.Entities;
+using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,20 +23,25 @@ builder.Services.AddDbContext<StoreContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 // Repository
+#region Generic repository
 builder.Services.AddScoped(typeof(IGenericGetAllRepo<>), typeof(GenericGetAllRepositoryImpl<>));
 builder.Services.AddScoped(typeof(IGenericGetByIdRepo<>), typeof(GenericGetByIdRepositoryImpl<>));
 builder.Services.AddScoped(typeof(IGenericGetByRepo<>), typeof(GenericGetByRepositoryImpl<>));
 builder.Services.AddScoped(typeof(IGenericPostRepo<>), typeof(GenericPostRepositoryImpl<>));
 builder.Services.AddScoped(typeof(IGenericPutRepo<>), typeof(GenericPutRepositoryImpl<>));
 builder.Services.AddScoped(typeof(IGenericDeleteRepo<>), typeof(GenericDeleteRepositoryImpl<>));
-
+#endregion
 // Service
-builder.Services.AddScoped(typeof(IGenericPostAsync<OwnerEntity>), typeof(OwnerImpl));
+#region Owner
+builder.Services.AddScoped(typeof(IGenericPostAsync<OwnerEntity,OwnerEntity>), typeof(OwnerImpl));
 builder.Services.AddScoped(typeof(IGenericGetByAsync<OwnerEntity, EmailFilter>), typeof(OwnerImpl));
-
+#endregion
+#region Vehicle
+builder.Services.AddScoped(typeof(IGenericPostAsync<VehicleRequest,VehicleResponse>), typeof(VehicleImpl));
+#endregion
 //Tools
 builder.Services.AddScoped(typeof(ISpecification<>), typeof(SpecificationImpl<>));
-
+builder.Services.AddSingleton<IMapper,Mapper>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

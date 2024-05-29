@@ -2,8 +2,8 @@ using DB.Entities;
 
 namespace Api.Services.Base.Interfaces
 {
-    public interface IGenericPostAsync<T> where T : BaseEntity
+    public interface IGenericPostAsync<TRequest,TResponse>
     {
-        Task<T> PostAsync(T request);
+        Task<TResponse> PostAsync(TRequest request);
     }
 }
