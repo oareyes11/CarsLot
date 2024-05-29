@@ -40,8 +40,8 @@ namespace DB.Migrations
                     FirstName = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
                     Phone = table.Column<string>(type: "character varying(15)", maxLength: 15, nullable: false),
-                    Email = table.Column<string>(type: "varbinary(50)", nullable: false),
-                    Password = table.Column<string>(type: "varbinary(50)", nullable: false)
+                    Email = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    Password = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -70,7 +70,7 @@ namespace DB.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "OwnerVehicle",
+                name: "own_owner_vehicle",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
@@ -81,15 +81,15 @@ namespace DB.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OwnerVehicle", x => x.Id);
+                    table.PrimaryKey("PK_own_owner_vehicle", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_OwnerVehicle_car_vehicle_VehicleId",
+                        name: "FK_own_owner_vehicle_car_vehicle_VehicleId",
                         column: x => x.VehicleId,
                         principalTable: "car_vehicle",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_OwnerVehicle_own_owner_OwnerId",
+                        name: "FK_own_owner_vehicle_own_owner_OwnerId",
                         column: x => x.OwnerId,
                         principalTable: "own_owner",
                         principalColumn: "Id",
@@ -97,13 +97,13 @@ namespace DB.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_OwnerVehicle_OwnerId",
-                table: "OwnerVehicle",
+                name: "IX_own_owner_vehicle_OwnerId",
+                table: "own_owner_vehicle",
                 column: "OwnerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OwnerVehicle_VehicleId",
-                table: "OwnerVehicle",
+                name: "IX_own_owner_vehicle_VehicleId",
+                table: "own_owner_vehicle",
                 column: "VehicleId");
 
             migrationBuilder.CreateIndex(
@@ -116,7 +116,7 @@ namespace DB.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "OwnerVehicle");
+                name: "own_owner_vehicle");
 
             migrationBuilder.DropTable(
                 name: "sal_sale");

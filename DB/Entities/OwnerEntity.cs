@@ -15,10 +15,10 @@ namespace DB.Entities
         [StringLength(15)]
         public string Phone { get; set; } = null!;
         [Required]
-        [Column(TypeName = "varbinary(50)")]
+        [StringLength(50)]
         public string Email { get; set; } = null!;
         [Required]
-        [Column(TypeName = "varbinary(50)")]
+        [StringLength(50)]
         public string Password { get; set; } = null!;
     }
 }

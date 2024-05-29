@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 namespace DB.Entities
 {
+    [Table(name: "own_owner_vehicle")]
     public class OwnerVehicleEntity : BaseEntity
     {
         [ForeignKey("OwnerEntity")]

@@ -32,7 +32,8 @@ namespace DB.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("varbinary(50)");
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -46,7 +47,8 @@ namespace DB.Migrations
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("varbinary(50)");
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.Property<string>("Phone")
                         .IsRequired()
@@ -81,7 +83,7 @@ namespace DB.Migrations
 
                     b.HasIndex("VehicleId");
 
-                    b.ToTable("OwnerVehicle");
+                    b.ToTable("own_owner_vehicle");
                 });
 
             modelBuilder.Entity("DB.Entities.SaleEntity", b =>

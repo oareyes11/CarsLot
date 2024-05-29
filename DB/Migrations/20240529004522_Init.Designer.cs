@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DB.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20240528235118_Init")]
+    [Migration("20240529004522_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -35,7 +35,8 @@ namespace DB.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("varbinary(50)");
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -49,7 +50,8 @@ namespace DB.Migrations
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("varbinary(50)");
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.Property<string>("Phone")
                         .IsRequired()
@@ -84,7 +86,7 @@ namespace DB.Migrations
 
                     b.HasIndex("VehicleId");
 
-                    b.ToTable("OwnerVehicle");
+                    b.ToTable("own_owner_vehicle");
                 });
 
             modelBuilder.Entity("DB.Entities.SaleEntity", b =>
