@@ -14,7 +14,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddDbContext<StoreContext>(opt =>
 {
-    opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"), options => options.MigrationsAssembly("Api"));
+    opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 // Repository
 builder.Services.AddScoped(typeof(IGenericGetAllRepo<>), typeof(GenericGetAllRepositoryImpl<>));
