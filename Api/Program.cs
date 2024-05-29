@@ -1,6 +1,8 @@
+using Api.Filters.Base;
 using Api.Repositories.Generic;
 using Api.Services.Base.Interfaces;
 using Api.Services.Owner.Implementation;
+using Core.Implementations.Specification;
 using Core.Repository.Interfaces;
 using DB.context;
 using DB.Entities;
@@ -19,12 +21,17 @@ builder.Services.AddDbContext<StoreContext>(opt =>
 // Repository
 builder.Services.AddScoped(typeof(IGenericGetAllRepo<>), typeof(GenericGetAllRepositoryImpl<>));
 builder.Services.AddScoped(typeof(IGenericGetByIdRepo<>), typeof(GenericGetByIdRepositoryImpl<>));
+builder.Services.AddScoped(typeof(IGenericGetByRepo<>), typeof(GenericGetByRepositoryImpl<>));
 builder.Services.AddScoped(typeof(IGenericPostRepo<>), typeof(GenericPostRepositoryImpl<>));
 builder.Services.AddScoped(typeof(IGenericPutRepo<>), typeof(GenericPutRepositoryImpl<>));
 builder.Services.AddScoped(typeof(IGenericDeleteRepo<>), typeof(GenericDeleteRepositoryImpl<>));
 
 // Service
 builder.Services.AddScoped(typeof(IGenericPostAsync<OwnerEntity>), typeof(OwnerImpl));
+builder.Services.AddScoped(typeof(IGenericGetByAsync<OwnerEntity, EmailFilter>), typeof(OwnerImpl));
+
+//Tools
+builder.Services.AddScoped(typeof(ISpecification<>), typeof(SpecificationImpl<>));
 
 
 builder.Services.AddEndpointsApiExplorer();
