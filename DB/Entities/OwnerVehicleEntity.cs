@@ -6,11 +6,10 @@ namespace DB.Entities
     {
         [ForeignKey("OwnerEntity")]
         public int OwnerId { get; set; }
-        public OwnerEntity Owner { get; set; } = null!;
+        public virtual OwnerEntity Owner { get; set; } = null!;
         [ForeignKey("VehicleEntity")]
         public int VehicleId { get; set; }
-        public VehicleEntity Vehicle { get; set; } = null!;
-        [Column(TypeName = "decimal(10, 2)")]
+        public virtual VehicleEntity Vehicle { get; set; } = null!;
         public decimal AmountInvested { get; set; }
     }
 }

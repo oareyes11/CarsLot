@@ -13,6 +13,9 @@ using DB.context;
 using DB.Entities;
 using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
+using Api.Casts.Request.OwnerVehicle;
+using Api.Casts.Response.OwnerVehicle;
+using Api.Services.OwenerVehicle.implementation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,6 +43,9 @@ builder.Services.AddScoped(typeof(IGenericGetByAsync<OwnerEntity, EmailFilter>),
 #endregion
 #region Vehicle
 builder.Services.AddScoped(typeof(IGenericPostAsync<VehicleRequest, VehicleResponse>), typeof(VehicleImpl));
+#endregion
+#region OwnerVehicle
+builder.Services.AddScoped(typeof(IGenericPostAsync<OwnerVehicleRequest, OwnerVehicleResponse>), typeof(OwnerVehicleImpl));
 #endregion
 //Tools
 builder.Services.AddScoped(typeof(ISpecification<>), typeof(SpecificationImpl<>));
