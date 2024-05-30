@@ -1,7 +1,6 @@
-using Api.Casts.Base.Response;
-namespace Api.Casts.Response.Vehicle
+namespace Api.Casts.Request.Owner
 {
-    public class OwnerResponse : BaseResponse
+    public class OwnerRequest
     {
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;

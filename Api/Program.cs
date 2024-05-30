@@ -1,6 +1,7 @@
 using Api.Casts.Request.Vehicle;
-using Api.Casts.Request.Vehicle;
+using Api.Casts.Request.Owner;
 using Api.Casts.Response.Vehicle;
+using Api.Casts.Response.Owner;
 using Api.Filters.Base;
 using Api.Repositories.Generic;
 using Api.Services.Base.Interfaces;
