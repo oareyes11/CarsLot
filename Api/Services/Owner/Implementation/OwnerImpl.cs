@@ -3,6 +3,7 @@ using Api.Casts.Response.Owner;
 using Api.Filters.Base;
 using Api.Services.Base.Interfaces;
 using Core.Repository.Interfaces;
+using Core.Tools.HttpResponse;
 using DB.Entities;
 using MapsterMapper;
 namespace Api.Services.Owner.Implementation
@@ -25,12 +26,12 @@ namespace Api.Services.Owner.Implementation
             _specifications.AddCriterial(x => x.Email == filter.Email);
             return await _getByOwnerRepo.GetByAsync(_specifications);
         }
-        public async Task<OwnerResponse> PostAsync(OwnerRequest request)
+        public async Task<ResponseSuccess<OwnerResponse>> PostAsync(OwnerRequest request)
         {
             OwnerEntity ownerRequest = _mapper.Map<OwnerEntity>(request);
             OwnerEntity? owner = await _postOwnerRepo.PostAsync(ownerRequest);
             OwnerResponse ownerResponse = _mapper.Map<OwnerResponse>(owner);
-            return ownerResponse;
+            return new ResponseSuccess<OwnerResponse>(HttpEnums.NotFound, ownerResponse);
         }
     }
 }

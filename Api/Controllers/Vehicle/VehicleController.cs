@@ -2,6 +2,7 @@ using Api.Casts.Request.Vehicle;
 using Api.Casts.Response.Vehicle;
 using Api.Controllers.Base;
 using Api.Services.Base.Interfaces;
+using Core.Tools.HttpResponse;
 using Microsoft.AspNetCore.Mvc;
 namespace Api.Controllers.Vehicle
 {
@@ -13,10 +14,10 @@ namespace Api.Controllers.Vehicle
             _postVehicleService = provider.GetRequiredService<IGenericPostAsync<VehicleRequest, VehicleResponse>>();
         }
         [HttpPost()]
-        public async Task<ActionResult<VehicleResponse>> PostUser([FromBody] VehicleRequest request)
+        public async Task<ResponseSuccess<VehicleResponse>> PostUser([FromBody] VehicleRequest request)
         {
-            VehicleResponse? vehicle = await _postVehicleService.PostAsync(request);
-            return Ok(vehicle);
+            ResponseSuccess<VehicleResponse>? vehicle = await _postVehicleService.PostAsync(request);
+            return vehicle;
         }
     }
 }
