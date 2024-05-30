@@ -6,6 +6,7 @@ using Core.Repository.Interfaces;
 using Core.Tools.HttpResponse;
 using DB.Entities;
 using MapsterMapper;
+using Microsoft.AspNetCore.Mvc;
 namespace Api.Services.Owner.Implementation
 {
     public class OwnerImpl : IGenericPostAsync<OwnerRequest,OwnerResponse>, IGenericGetByAsync<OwnerEntity, EmailFilter>
@@ -26,12 +27,12 @@ namespace Api.Services.Owner.Implementation
             _specifications.AddCriterial(x => x.Email == filter.Email);
             return await _getByOwnerRepo.GetByAsync(_specifications);
         }
-        public async Task<ResponseSuccess<OwnerResponse>> PostAsync(OwnerRequest request)
+        public async Task<IActionResult> PostAsync(OwnerRequest request)
         {
             OwnerEntity ownerRequest = _mapper.Map<OwnerEntity>(request);
             OwnerEntity? owner = await _postOwnerRepo.PostAsync(ownerRequest);
             OwnerResponse ownerResponse = _mapper.Map<OwnerResponse>(owner);
-            return new ResponseSuccess<OwnerResponse>(HttpEnums.NotFound, ownerResponse);
+            return new HttpDataResponse<OwnerResponse>(ownerResponse).Success();
         }
     }
 }

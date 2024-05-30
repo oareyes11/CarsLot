@@ -111,3 +111,10 @@
 /Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/Core.pdb
 /Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/Mapster.dll
 /Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/Mapster.Core.dll
+/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/Microsoft.AspNetCore.Razor.Language.dll
+/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/Microsoft.CodeAnalysis.Razor.dll
+/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/Newtonsoft.Json.Bson.dll
+/Users/andres/Library/CloudStorage/GoogleDrive-oareyesdeleon11@gmail.com/Mi unidad/Codigo/C#/CarsLot/Api/bin/Debug/net8.0/System.Security.Permissions.dll

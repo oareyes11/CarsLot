@@ -5,6 +5,7 @@ using Core.Repository.Interfaces;
 using Core.Tools.HttpResponse;
 using DB.Entities;
 using MapsterMapper;
+using Microsoft.AspNetCore.Mvc;
 namespace Api.Services.Vehicle
 {
     public class VehicleImpl : IGenericPostAsync<VehicleRequest, VehicleResponse>
@@ -17,12 +18,13 @@ namespace Api.Services.Vehicle
             _mapper = provider.GetRequiredService<IMapper>();
         }
 
-        public async Task<ResponseSuccess<VehicleResponse>> PostAsync(VehicleRequest request)
+        public async Task<IActionResult> PostAsync(VehicleRequest request)
         {
             VehicleEntity vehicleRequest = _mapper.Map<VehicleEntity>(request);
             VehicleEntity vehicle = await _postVehicleRepo.PostAsync(vehicleRequest);
             VehicleResponse vehicleResponse = _mapper.Map<VehicleResponse>(vehicle);
-            return new ResponseSuccess<VehicleResponse>(HttpEnums.OK, vehicleResponse);
+            return new HttpDataResponse<VehicleResponse>(vehicleResponse).Success();
+
 
         }
     }

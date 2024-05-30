@@ -1,9 +1,9 @@
-using Core.Tools.HttpResponse;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Services.Base.Interfaces
 {
     public interface IGenericPostAsync<TRequest,TResponse>
     {
-        Task<ResponseSuccess<TResponse>> PostAsync(TRequest request);
+        Task<IActionResult> PostAsync(TRequest request);
     }
 }

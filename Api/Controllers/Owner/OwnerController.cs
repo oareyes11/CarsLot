@@ -18,15 +18,13 @@ namespace Api.Controllers.Owner
             _getByEmailOwnerService = provider.GetRequiredService<IGenericGetByAsync<OwnerEntity, EmailFilter>>();
         }
         [HttpPost("/api/sign-up")]
-        public async Task<ResponseSuccess<OwnerResponse>> PostUser([FromBody] OwnerRequest request)
+        public async Task<IActionResult> PostUser([FromBody] OwnerRequest request)
         {
-            ResponseSuccess<OwnerResponse>? owner = await _postOwnerService.PostAsync(request);
-            return owner;
+            return await _postOwnerService.PostAsync(request);
         }
         [HttpPost("/api/login")]
         public async Task<ActionResult<OwnerEntity>> GetUsersByEmail(EmailFilter email)
         {
-            
             OwnerEntity? owner = await _getByEmailOwnerService.GetByAsync(email);
             return Ok(owner);
         }

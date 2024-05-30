@@ -14,10 +14,9 @@ namespace Api.Controllers.OwnerVehicle
             _postOwnerService = provider.GetRequiredService<IGenericPostAsync<OwnerVehicleRequest, OwnerVehicleResponse>>();
         }
         [HttpPost()]
-        public async Task<ResponseSuccess<OwnerVehicleResponse>> PostUser([FromBody] OwnerVehicleRequest request)
+        public async Task<IActionResult> PostUser([FromBody] OwnerVehicleRequest request)
         {
-            ResponseSuccess<OwnerVehicleResponse>? ownerVehicle = await _postOwnerService.PostAsync(request);
-            return ownerVehicle;
+            return await _postOwnerService.PostAsync(request);
         }
     }
 }

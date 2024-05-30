@@ -14,10 +14,9 @@ namespace Api.Controllers.Vehicle
             _postVehicleService = provider.GetRequiredService<IGenericPostAsync<VehicleRequest, VehicleResponse>>();
         }
         [HttpPost()]
-        public async Task<ResponseSuccess<VehicleResponse>> PostUser([FromBody] VehicleRequest request)
+        public async Task<IActionResult> PostUser([FromBody] VehicleRequest request)
         {
-            ResponseSuccess<VehicleResponse>? vehicle = await _postVehicleService.PostAsync(request);
-            return vehicle;
+            return await _postVehicleService.PostAsync(request);
         }
     }
 }
