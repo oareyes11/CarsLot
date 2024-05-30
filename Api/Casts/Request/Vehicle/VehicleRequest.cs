@@ -1,4 +1,4 @@
-namespace Api.Casts.Reqest.Vehicle
+namespace Api.Casts.Request.Vehicle
 {
     public class VehicleRequest
     {

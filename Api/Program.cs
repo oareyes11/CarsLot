@@ -1,4 +1,5 @@
-using Api.Casts.Reqest.Vehicle;
+using Api.Casts.Request.Vehicle;
+using Api.Casts.Request.Vehicle;
 using Api.Casts.Response.Vehicle;
 using Api.Filters.Base;
 using Api.Repositories.Generic;
@@ -33,15 +34,15 @@ builder.Services.AddScoped(typeof(IGenericDeleteRepo<>), typeof(GenericDeleteRep
 #endregion
 // Service
 #region Owner
-builder.Services.AddScoped(typeof(IGenericPostAsync<OwnerEntity,OwnerEntity>), typeof(OwnerImpl));
+builder.Services.AddScoped(typeof(IGenericPostAsync<OwnerRequest, OwnerResponse>), typeof(OwnerImpl));
 builder.Services.AddScoped(typeof(IGenericGetByAsync<OwnerEntity, EmailFilter>), typeof(OwnerImpl));
 #endregion
 #region Vehicle
-builder.Services.AddScoped(typeof(IGenericPostAsync<VehicleRequest,VehicleResponse>), typeof(VehicleImpl));
+builder.Services.AddScoped(typeof(IGenericPostAsync<VehicleRequest, VehicleResponse>), typeof(VehicleImpl));
 #endregion
 //Tools
 builder.Services.AddScoped(typeof(ISpecification<>), typeof(SpecificationImpl<>));
-builder.Services.AddSingleton<IMapper,Mapper>();
+builder.Services.AddSingleton<IMapper, Mapper>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

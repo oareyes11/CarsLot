@@ -1,3 +1,5 @@
+using Api.Casts.Request.Vehicle;
+using Api.Casts.Response.Vehicle;
 using Api.Controllers.Base;
 using Api.Filters.Base;
 using Api.Services.Base.Interfaces;
@@ -7,20 +9,20 @@ namespace Api.Controllers.Owner
 {
     public class OwnerController : BaseApiController
     {
-        private readonly IGenericPostAsync<OwnerEntity,OwnerEntity> _postOwnerService;
+        private readonly IGenericPostAsync<OwnerRequest,OwnerResponse> _postOwnerService;
         private readonly IGenericGetByAsync<OwnerEntity, EmailFilter> _getByEmailOwnerService;
         public OwnerController(IServiceProvider provider)
         {
-            _postOwnerService = provider.GetRequiredService<IGenericPostAsync<OwnerEntity,OwnerEntity>>();
+            _postOwnerService = provider.GetRequiredService<IGenericPostAsync<OwnerRequest,OwnerResponse>>();
             _getByEmailOwnerService = provider.GetRequiredService<IGenericGetByAsync<OwnerEntity, EmailFilter>>();
         }
-        [HttpPost("/sign-up")]
-        public async Task<ActionResult<OwnerEntity>> PostUser([FromBody] OwnerEntity request)
+        [HttpPost("/api/sign-up")]
+        public async Task<ActionResult<OwnerEntity>> PostUser([FromBody] OwnerRequest request)
         {
-            OwnerEntity? owner = await _postOwnerService.PostAsync(request);
+            OwnerResponse? owner = await _postOwnerService.PostAsync(request);
             return Ok(owner);
         }
-        [HttpPost("/login")]
+        [HttpPost("/api/login")]
         public async Task<ActionResult<OwnerEntity>> GetUsersByEmail(EmailFilter email)
         {
             OwnerEntity? owner = await _getByEmailOwnerService.GetByAsync(email);

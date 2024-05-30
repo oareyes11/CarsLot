@@ -1,4 +1,4 @@
-using Api.Casts.Reqest.Vehicle;
+using Api.Casts.Request.Vehicle;
 using Api.Casts.Response.Vehicle;
 using Api.Controllers.Base;
 using Api.Services.Base.Interfaces;
